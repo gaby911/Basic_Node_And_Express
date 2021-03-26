@@ -35,7 +35,7 @@ app.get("/json", function(req, res) {
       });
     }
   );
-
+//method2
  /* const middleware = (req, res, next) => {
     req.time = new Date().toString();
     next();
@@ -46,9 +46,20 @@ app.get("/json", function(req, res) {
       time: req.time
     });
   });*/
-  
 
 
+  app.get("/:word/echo", function(req,res){
+    const word =  req.params.word;
+    res.json({echo: word});
+});
+
+// method 2
+// app.get("/:word/echo", (req, res) => {
+//   const { word } = req.params;
+//   res.json({
+//     echo: word
+//   });
+// });
 
 
 
