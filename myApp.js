@@ -61,7 +61,11 @@ app.get("/json", function(req, res) {
 //   });
 // });
 
-
+app.get("/name",function(req,res){
+    let firstname = req.query.first;
+    let lastname = req.query.last;
+    res.json({name: `${firstname} ${lastname}`});
+});
 
 
 
